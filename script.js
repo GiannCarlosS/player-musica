@@ -43,43 +43,52 @@ const songs = [
     }
 ];
 
+let isPlaying = false;
 let currentSong = 0;
 let loaded = false;
 
 function playSong() {
     const icon = playBtn.querySelector('i');
 
-    if (!loaded) {
-        song.src = songs[currentSong].file;
-        cover.src = songs[currentSong].cover;
-        songName.innerText = songs[currentSong].name;
-        loaded = true;
-    }
+    songName.innerText = songs[currentSong].name;
+    cover.src = songs[currentSong].cover;
 
-    if (song.paused) {
-        song.play();
-        icon.classList.remove('bi-play-circle-fill');
-        icon.classList.add('bi-pause-circle-fill');
+    if (!isPlaying) {
+        song.src = songs[currentSong].file;
+
+        song.load(); // 🔑 força carregar
+
+        song.play()
+            .then(() => {
+                isPlaying = true;
+                icon.classList.remove('bi-play-circle-fill');
+                icon.classList.add('bi-pause-circle-fill');
+            })
+            .catch(err => {
+                console.log('Erro ao tocar:', err);
+            });
+
     } else {
         song.pause();
+        isPlaying = false;
         icon.classList.remove('bi-pause-circle-fill');
         icon.classList.add('bi-play-circle-fill');
     }
 }
 
+
 function nextSong() {
     currentSong = (currentSong + 1) % songs.length;
-    loaded = false;
-
-    song.pause();
-    song.currentTime = 0;
-
-    const icon = playBtn.querySelector('i');
-    icon.classList.remove('bi-pause-circle-fill');
-    icon.classList.add('bi-play-circle-fill');
-
+    isPlaying = false;
     playSong();
 }
+
+function prevSong() {
+    currentSong = (currentSong - 1 + songs.length) % songs.length;
+    isPlaying = false;
+    playSong();
+}
+
 
 function prevSong() {
     currentSong = (currentSong - 1 + songs.length) % songs.length;
