@@ -79,6 +79,71 @@ const songs = [
         name: "Acredito",
         file: "songs/acredito.mp3",
         cover: "acredito.jpg"
+    },
+    {
+        name: "Sua Presença",
+        file: "songs/sua_presenca.mp3",
+        cover: "sua_presenca.jpg"
+    },
+    {
+        name: "Átos 2",
+        file: "songs/atos2.mp3",
+        cover: "atos2.jpg"
+    },
+    {
+        name: "Eu Só Quero Tua Presença",
+        file: "songs/eu_so_quero_tua_presenca.mp3",
+        cover: "eu_so_quero_tua_presenca.jpg"
+    },
+    {
+        name: "Todavia Me Alegrarei",
+        file: "songs/samuel_messias_todavia_me_alegrarei.mp3",
+        cover: "samuel_messias_todavia_me_alegrarei.jpg"
+    },
+    {
+        name: "Tudo A Ver Com Ele",
+        file: "songs/tudo_a_ver_com_ele_central3.mp3",
+        cover: "tudo_a_ver_com_ele_central3.jpg"
+    },
+    {
+        name: "Era Eu",
+        file: "songs/era_eu_casa_worship.mp3",
+        cover: ""
+    },
+    {
+        name: "Lindo És + Só Quero Ver Você",
+        file: "songs/juliano_son_lindo_es_so_quero_ver_voce.mp3",
+        cover: ""
+    },
+    {
+        name: "Caminho No Deserto",
+        file: "songs/caminho_no_deserto_fernandinho_epaula.mp3",
+        cover: ""
+    },
+    {
+        name: "Nada Mais",
+        file: "songs/gabriel_guedes_nada_mais.mp3",
+        cover: ""
+    },
+    {
+        name: "Em Teus Braços",
+        file: "songs/em_teus_bracos_mauro_henrique.mp3",
+        cover: ""
+    },
+    {
+        name: "Furioso Oceano",
+        file: "songs/furioso_oceano_jhonas_serra.mp3",
+        cover: ""
+    },
+    {
+        name: "Colossenses E Suas Linhas de Amor",
+        file: "songs/marco_telles_colossenses_e_suas_linhas_de_amor.mp3",
+        cover: ""
+    },
+    {
+        name: "Único",
+        file: "songs/unico.mp3",
+        cover: ""
     }
 ];
 
