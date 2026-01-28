@@ -1,92 +1,217 @@
+/* =============================== */
+/* ESTILO GLOBAL DA PÁGINA         */
+/* =============================== */
+
 body {
     min-height: 100vh;
+    /* Garante que o body ocupe no mínimo a altura total da tela */
+
     margin: 0;
+    /* Remove margens padrão do navegador */
+
     background-image: linear-gradient(
         to bottom,
         rgb(226, 0, 0),
         rgb(122, 3, 3)
     );
+    /* Fundo em degradê vertical (vermelho claro → vermelho escuro) */
+
     background-repeat: no-repeat;
+    /* Evita repetição do fundo */
+
     background-attachment: fixed;
+    /* Mantém o fundo fixo ao rolar a página */
 
     color: white;
+    /* Cor padrão do texto */
+
     font-family: sans-serif;
+    /* Fonte simples e limpa */
+
     display: flex;
+    /* Usa flexbox para organizar o layout */
+
     flex-direction: column;
+    /* Elementos empilhados verticalmente */
+
     align-items: center;
+    /* Centraliza os elementos horizontalmente */
 }
 
-button{
+
+/* =============================== */
+/* BOTÕES                          */
+/* =============================== */
+
+button {
     background-color: inherit;
+    /* Herda a cor de fundo do elemento pai */
+
     color: inherit;
+    /* Herda a cor do texto */
+
     border: none;
+    /* Remove borda padrão dos botões */
 }
 
-#below-cover{
+
+/* =============================== */
+/* INFORMAÇÕES ABAIXO DA CAPA      */
+/* =============================== */
+
+#below-cover {
     display: flex;
+    /* Alinha itens em linha */
+
     flex-direction: row;
+    /* Organiza os elementos horizontalmente */
+
     justify-content: space-between;
+    /* Espaça os itens igualmente */
+
     align-items: center;
+    /* Alinha verticalmente ao centro */
+
     margin: 2em 0em 2em 0em;
+    /* Espaçamento acima e abaixo */
 }
+
+
+/* =============================== */
+/* CONTAINER DOS BOTÕES            */
+/* =============================== */
 
 #button-container {
     display: flex;
+    /* Usa flexbox */
+
     flex-direction: row;
+    /* Botões em linha */
+
     justify-content: space-around;
+    /* Espaço igual entre os botões */
+
     align-items: center;
+    /* Alinhamento vertical */
 }
-                                                /* Tamanho do botão */
+
+
+/* =============================== */
+/* TAMANHO DOS BOTÕES              */
+/* =============================== */
+
 .button {
     font-size: 1.5em;
+    /* Tamanho padrão dos botões */
 }
 
 .button_navegate {
     font-size: 3em;
+    /* Botões de navegação (anterior / próximo) */
 }
 
 .button-biggest {
     font-size: 5em;
+    /* Botão principal (play/pause) */
 }
+
+
+/* =============================== */
+/* CAPA DA MÚSICA                  */
+/* =============================== */
 
 #cover {
     width: 450px;
+    /* Define largura fixa da capa */
 }
+
+
+/* =============================== */
+/* TÍTULO DO PLAYER                */
+/* =============================== */
+
 #playlist-title {
     display: flex;
+    /* Usa flexbox */
+
     flex-direction: row;
+    /* Elementos em linha */
+
     justify-content: center;
+    /* Centraliza o texto */
+
     margin: 1em 0em 4em 0em;
+    /* Espaçamento superior e inferior */
 }
-#song-name{
+
+
+/* =============================== */
+/* INFORMAÇÕES DA MÚSICA           */
+/* =============================== */
+
+#song-name {
     font-size: 1.5em;
+    /* Nome da música maior */
+
     font-weight: bolder;
-
+    /* Texto em negrito */
 }
 
-#band-name{
+#band-name {
     color: rgb(189, 189, 189);
+    /* Cor mais clara para o nome da banda */
 }
+
+
+/* =============================== */
+/* BOTÃO LIKE                      */
+/* =============================== */
 
 #like {
     color: rgb(189, 189, 189);
+    /* Ícone de curtir em cinza */
 }
+
+
+/* =============================== */
+/* BARRA DE PROGRESSO              */
+/* =============================== */
+
 #progress-container {
-    width: 450px; /* mesma largura da capa */
+    width: 450px;
+    /* Mesma largura da capa */
 }
 
 #progress-bar {
     background-color: rgb(189, 189, 189);
+    /* Cor do fundo da barra */
+
     height: 4px;
+    /* Espessura da barra */
+
     width: 100%;
+    /* Ocupa toda a largura do container */
+
     border-radius: 15px;
-    overflow: hidden; /* ESSENCIAL */
+    /* Bordas arredondadas */
+
+    overflow: hidden;
+    /* ESSENCIAL: impede o progresso de "vazar" */
+
     margin-bottom: 1em;
+    /* Espaço abaixo da barra */
 }
 
 #current-progress {
     background-color: white;
+    /* Cor da parte preenchida */
+
     height: 100%;
-    width: 50%; /* progresso */
+    /* Mesma altura da barra */
+
+    width: 50%;
+    /* Progresso (controlado via JavaScript) */
+
     border-radius: 15px;
+    /* Bordas arredondadas */
 }
