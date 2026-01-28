@@ -12,7 +12,7 @@ body {
     background-image: linear-gradient(
         to bottom,
         rgb(226, 0, 0),
-        rgb(122, 3, 3)
+        rgb(77, 2, 2)
     );
     /* Fundo em degradê vertical (vermelho claro → vermelho escuro) */
 
@@ -36,6 +36,20 @@ body {
 
     align-items: center;
     /* Centraliza os elementos horizontalmente */
+}
+/* =============================== */
+/* GENERO MÚSICAL                  */
+/* =============================== */
+
+#playlist-title {
+    font-family: sans-serif;
+    /* Tipo de letra */
+
+    font-size: 2.5em;
+    /* Tamanho da Fonte */
+
+    font-weight: 800;
+    /* tensidade do negrito */
 }
 
 
@@ -123,6 +137,9 @@ button {
 #cover {
     width: 450px;
     /* Define largura fixa da capa */
+
+        margin: -8em 0em 2em 0em;
+    /* Espaçamento acima e abaixo */
 }
 
 
