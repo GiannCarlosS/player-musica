@@ -108,42 +108,42 @@ const songs = [
     {
         name: "Era Eu",
         file: "songs/era_eu_casa_worship.mp3",
-        cover: ""
+        cover: "era_eu_casa_worship.jpg"
     },
     {
         name: "Lindo És + Só Quero Ver Você",
         file: "songs/juliano_son_lindo_es_so_quero_ver_voce.mp3",
-        cover: ""
+        cover: "juliano_son_lindo_es_so_quero_ver_voce.jpg"
     },
     {
         name: "Caminho No Deserto",
         file: "songs/caminho_no_deserto_fernandinho_epaula.mp3",
-        cover: ""
+        cover: "caminho_no_deserto_fernandinho_epaula.jpg"
     },
     {
         name: "Nada Mais",
         file: "songs/gabriel_guedes_nada_mais.mp3",
-        cover: ""
+        cover: "gabriel_guedes_nada_mais.jpg"
     },
     {
         name: "Em Teus Braços",
         file: "songs/em_teus_bracos_mauro_henrique.mp3",
-        cover: ""
+        cover: "em_teus_bracos_mauro_henrique.jpg"
     },
     {
         name: "Furioso Oceano",
         file: "songs/furioso_oceano_jhonas_serra.mp3",
-        cover: ""
+        cover: "furioso_oceano_jhonas_serra.jpg"
     },
     {
         name: "Colossenses E Suas Linhas de Amor",
         file: "songs/marco_telles_colossenses_e_suas_linhas_de_amor.mp3",
-        cover: ""
+        cover: "marco_telles_colossenses_e_suas_linhas_de_amor.jpg"
     },
     {
         name: "Único",
         file: "songs/unico.mp3",
-        cover: ""
+        cover: "unico.jpg"
     }
 ];
 
