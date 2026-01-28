@@ -1,184 +1,115 @@
 /* =============================== */
-/* ESTILO GLOBAL DA PÁGINA         */
+/* RESET E BASE GLOBAL             */
 /* =============================== */
+
+* {
+    box-sizing: border-box;
+    /* Garante que padding não quebre largura no mobile */
+}
 
 body {
     min-height: 100vh;
-    /* Garante que o body ocupe no mínimo a altura total da tela */
+    /* Ocupa no mínimo a altura da tela */
 
     margin: 0;
-    /* Remove margens padrão do navegador */
+    /* Remove margem padrão do navegador */
 
     background-image: linear-gradient(
         to bottom,
         rgb(226, 0, 0),
         rgb(77, 2, 2)
     );
-    /* Fundo em degradê vertical (vermelho claro → vermelho escuro) */
+    /* Fundo em degradê */
 
     background-repeat: no-repeat;
-    /* Evita repetição do fundo */
-
     background-attachment: fixed;
-    /* Mantém o fundo fixo ao rolar a página */
 
     color: white;
     /* Cor padrão do texto */
 
     font-family: sans-serif;
-    /* Fonte simples e limpa */
 
     display: flex;
-    /* Usa flexbox para organizar o layout */
-
     flex-direction: column;
-    /* Elementos empilhados verticalmente */
-
     align-items: center;
-    /* Centraliza os elementos horizontalmente */
-}
-/* =============================== */
-/* GENERO MÚSICAL                  */
-/* =============================== */
-
-#playlist-title {
-    font-family: sans-serif;
-    /* Tipo de letra */
-
-    font-size: 2.5em;
-    /* Tamanho da Fonte */
-
-    font-weight: 800;
-    /* tensidade do negrito */
+    /* Centraliza todo o conteúdo */
 }
 
-
 /* =============================== */
-/* BOTÕES                          */
-/* =============================== */
-
-button {
-    background-color: inherit;
-    /* Herda a cor de fundo do elemento pai */
-
-    color: inherit;
-    /* Herda a cor do texto */
-
-    border: none;
-    /* Remove borda padrão dos botões */
-}
-
-
-/* =============================== */
-/* INFORMAÇÕES ABAIXO DA CAPA      */
+/* CONTAINER PRINCIPAL             */
 /* =============================== */
 
-#below-cover {
+.music-container {
+    width: 100%;
+    max-width: 500px;
+    /* Limite no desktop */
+
+    padding-top: 2em;
+    /* Espaço geral no topo (evita título colado) */
+
     display: flex;
-    /* Alinha itens em linha */
-
-    flex-direction: row;
-    /* Organiza os elementos horizontalmente */
-
-    justify-content: space-between;
-    /* Espaça os itens igualmente */
-
+    flex-direction: column;
     align-items: center;
-    /* Alinha verticalmente ao centro */
-
-    margin: 2em 0em 2em 0em;
-    /* Espaçamento acima e abaixo */
 }
-
-
-/* =============================== */
-/* CONTAINER DOS BOTÕES            */
-/* =============================== */
-
-#button-container {
-    display: flex;
-    /* Usa flexbox */
-
-    flex-direction: row;
-    /* Botões em linha */
-
-    justify-content: space-around;
-    /* Espaço igual entre os botões */
-
-    align-items: center;
-    /* Alinhamento vertical */
-}
-
-
-/* =============================== */
-/* TAMANHO DOS BOTÕES              */
-/* =============================== */
-
-.button {
-    font-size: 1.5em;
-    /* Tamanho padrão dos botões */
-}
-
-.button_navegate {
-    font-size: 3em;
-    /* Botões de navegação (anterior / próximo) */
-}
-
-.button-biggest {
-    font-size: 5em;
-    /* Botão principal (play/pause) */
-}
-
-
-/* =============================== */
-/* CAPA DA MÚSICA                  */
-/* =============================== */
-
-#cover {
-    width: 450px;
-    /* Define largura fixa da capa */
-
-        margin: -8em 0em 2em 0em;
-    /* Espaçamento acima e abaixo */
-}
-
 
 /* =============================== */
 /* TÍTULO DO PLAYER                */
 /* =============================== */
 
 #playlist-title {
+    font-family: sans-serif;
+    font-size: 2.5em;
+    font-weight: 800;
+
     display: flex;
-    /* Usa flexbox */
-
-    flex-direction: row;
-    /* Elementos em linha */
-
     justify-content: center;
-    /* Centraliza o texto */
 
-    margin: 1em 0em 4em 0em;
-    /* Espaçamento superior e inferior */
+    margin: 0 0 1.5em;
+    /* Espaço apenas abaixo */
 }
 
+/* =============================== */
+/* CAPA DA MÚSICA                  */
+/* =============================== */
+
+#cover {
+    width: 90vw;
+    /* Responsivo no mobile */
+
+    max-width: 450px;
+    /* Limite no desktop */
+
+    border-radius: 10px;
+    /* Opcional: visual mais bonito */
+}
 
 /* =============================== */
-/* INFORMAÇÕES DA MÚSICA           */
+/* INFORMAÇÕES ABAIXO DA CAPA      */
+/* =============================== */
+
+#below-cover {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 1.5em 0;
+}
+
+/* =============================== */
+/* NOME DA MÚSICA E BANDA          */
 /* =============================== */
 
 #song-name {
-    font-size: 1.5em;
-    /* Nome da música maior */
-
-    font-weight: bolder;
-    /* Texto em negrito */
+    font-size: 1.4em;
+    font-weight: bold;
 }
 
 #band-name {
+    font-size: 1em;
     color: rgb(189, 189, 189);
-    /* Cor mais clara para o nome da banda */
 }
-
 
 /* =============================== */
 /* BOTÃO LIKE                      */
@@ -186,49 +117,109 @@ button {
 
 #like {
     color: rgb(189, 189, 189);
-    /* Ícone de curtir em cinza */
 }
 
+/* =============================== */
+/* CONTAINER DOS BOTÕES            */
+/* =============================== */
+
+#button-container {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    margin: 1.5em 0;
+}
+
+/* =============================== */
+/* ESTILO BASE DOS BOTÕES          */
+/* =============================== */
+
+button {
+    background: none;
+    border: none;
+    color: inherit;
+
+    cursor: pointer;
+}
+
+/* =============================== */
+/* TAMANHO DOS BOTÕES              */
+/* =============================== */
+
+.button {
+    font-size: 1.6em;
+    /* Botões menores */
+}
+
+.button-navigate {
+    font-size: 3em;
+    /* Anterior / Próximo */
+}
+
+.button-biggest {
+    font-size: 4.5em;
+    /* Play / Pause */
+}
 
 /* =============================== */
 /* BARRA DE PROGRESSO              */
 /* =============================== */
 
 #progress-container {
-    width: 450px;
-    /* Mesma largura da capa */
+    width: 90vw;
+    max-width: 450px;
 }
 
 #progress-bar {
-    background-color: rgb(189, 189, 189);
-    /* Cor do fundo da barra */
-
-    height: 4px;
-    /* Espessura da barra */
-
     width: 100%;
-    /* Ocupa toda a largura do container */
+    height: 4px;
+
+    background-color: rgb(189, 189, 189);
 
     border-radius: 15px;
-    /* Bordas arredondadas */
-
     overflow: hidden;
-    /* ESSENCIAL: impede o progresso de "vazar" */
 
     margin-bottom: 1em;
-    /* Espaço abaixo da barra */
 }
 
 #current-progress {
-    background-color: white;
-    /* Cor da parte preenchida */
-
     height: 100%;
-    /* Mesma altura da barra */
-
     width: 50%;
-    /* Progresso (controlado via JavaScript) */
+    /* Controlado via JS */
 
+    background-color: white;
     border-radius: 15px;
-    /* Bordas arredondadas */
+}
+
+/* =============================== */
+/* RESPONSIVIDADE (MOBILE)         */
+/* =============================== */
+
+@media (max-width: 600px) {
+
+    #playlist-title {
+        font-size: 1.8em;
+        /* Título menor no celular */
+
+        margin-bottom: 1.2em;
+    }
+
+    .button {
+        font-size: 1.3em;
+    }
+
+    .button-navigate {
+        font-size: 2.5em;
+    }
+
+    .button-biggest {
+        font-size: 3.8em;
+    }
+
+    #below-cover {
+        margin: 1em 0;
+    }
 }
