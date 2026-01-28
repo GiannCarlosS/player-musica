@@ -27,102 +27,94 @@
 
 <body>
 
-<!-- Container principal do player -->
-<div class="music-container">
+<!-- ===================== -->
+<!-- TELA: MENU PRINCIPAL -->
+<!-- ===================== -->
+<section id="screen-menu" class="screen active">
+    <h1 id="logo">WorshipHub</h1>
 
-    <!-- Título da playlist / player -->
-    <h4 id="playlist-title">WorshipHub</h4>
-
-    <!-- ===================== -->
-    <!-- CAPA DA MÚSICA        -->
-    <!-- ===================== -->
-    <!-- A imagem muda conforme a música -->
-    <img id="cover" src="abencao.jpg" alt="Capa da música">
-
-    <!-- ===================== -->
-    <!-- ELEMENTO DE ÁUDIO     -->
-    <!-- ===================== -->
-    <!-- Responsável por tocar a música -->
-    <!-- preload="metadata" carrega apenas informações iniciais -->
-    <audio id="audio" preload="metadata"></audio>
-
-    <!-- ===================== -->
-    <!-- INFORMAÇÕES DA MÚSICA -->
-    <!-- ===================== -->
-    <div id="below-cover">
-
-        <!-- Nome da música e banda -->
-        <div id="song-info">
-            <div id="song-name">Nome da Música</div>
- <!--Desligado           <div id="band-name">Nome da Banda</div> -->
-        </div>
-
-        <!-- Botão de curtir (visual) -->
-        <button id="like" class="button">
-            <i class="bi bi-hand-thumbs-up"></i>
-        </button>
+    <div id="menu-container">
+        <button onclick="goTo('artist')">Artistas</button>
+        <button onclick="goTo('gender')">Gênero</button>
+        <button onclick="goTo('random')">Aleatório</button>
     </div>
+</section>
 
-    <!-- ===================== -->
-    <!-- BARRA DE PROGRESSO    -->
-    <!-- ===================== -->
-    <div id="progress-container">
-        <div id="progress-bar">
-            <!-- Parte preenchida conforme a música toca -->
-            <div id="current-progress"></div>
-        </div>
-    </div>
-
-    <!-- ===================== -->
-    <!-- BOTÕES DE CONTROLE    -->
-    <!-- ===================== -->
-    <div id="button-container">
-
-        <!-- Botão shuffle (aleatório) -->
-        <button id="shuffle" class="button">
-            <i class="bi bi-shuffle"></i>
-        </button>
-
-        <!-- Música anterior -->
-        <button id="previous" class="button button-navigate">
-            <i class="bi bi-chevron-double-left"></i>
-        </button>
-
-        <!-- Play / Pause -->
-        <!-- Chama a função playSong() no clique -->
-        <button id="play" class="button button-biggest" onclick="playSong()">
-            <i class="bi bi-play-circle-fill"></i>
-        </button>
-
-        <!-- Próxima música -->
-        <button id="next" class="button button-navigate">
-            <i class="bi bi-chevron-double-right"></i>
-        </button>
-
-        <!-- Repetir música / playlist -->
-        <button id="repeat" class="button">
-            <i class="bi bi-repeat"></i>
-        </button>
-    </div>
-
-    <!-- ===================== -->
-    <!-- TEMPO DA MÚSICA       -->
-    <!-- ===================== -->
-    <div id="time">
-        <!-- Tempo atual da música -->
-        <span id="current-time">0:00</span>
-
-        <!-- Duração total da música -->
-        <span id="duration">0:00</span>
-    </div>
-
-</div>
 
 <!-- ===================== -->
-<!-- SCRIPT JAVASCRIPT     -->
+<!-- TELA: PLAYER MÚSICAS -->
 <!-- ===================== -->
-<!-- defer garante que o JS carregue após o HTML -->
+<section id="screen-random" class="screen">
+
+    <!-- Voltar ao menu -->
+    <button id="back" onclick="goTo('menu')">⬅ Voltar</button>
+
+
+    <!-- PLAYER ALEATÓRIO -->
+    <div class="music-container">
+
+        <h4 id="playlist-title">WorshipHub</h4>
+
+        <img id="cover" src="abencao.jpg" alt="Capa da música">
+
+        <audio id="audio" preload="metadata"></audio>
+
+        <div id="below-cover">
+            <div id="song-info">
+                <div id="song-name">Nome da Música</div>
+            </div>
+
+            <button id="like" class="button">
+                <i class="bi bi-hand-thumbs-up"></i>
+            </button>
+        </div>
+
+        <div id="progress-container">
+            <div id="progress-bar">
+                <div id="current-progress"></div>
+            </div>
+        </div>
+
+        <div id="button-container">
+            <button id="previous" class="button button-navigate">
+                <i class="bi bi-chevron-double-left"></i>
+            </button>
+
+            <button id="play" class="button button-biggest" onclick="playSong()">
+                <i class="bi bi-play-circle-fill"></i>
+            </button>
+
+            <button id="next" class="button button-navigate">
+                <i class="bi bi-chevron-double-right"></i>
+            </button>
+        </div>
+
+        <div id="time">
+            <span id="current-time">0:00</span>
+            <span id="duration">0:00</span>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ===================== -->
+<!-- TELA: ALEATÓRIO / STREAM -->
+<!-- ===================== -->
+<section id="screen-stream" class="screen">
+
+    <button id="back" onclick="goTo('menu')">⬅ Voltar</button>
+
+    <h2>Modo Aleatório</h2>
+
+    <p>Tocando músicas automaticamente</p>
+
+    <button onclick="playRandom()">▶️ Iniciar</button>
+
+</section>
+
+
 <script src="script.js" defer></script>
-
 </body>
+
 </html>

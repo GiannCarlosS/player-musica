@@ -1,3 +1,55 @@
+.screen {
+    display: none;
+    min-height: 100vh;
+}
+
+.screen.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+
+
+.carousel-container {
+    width: 100%;
+    overflow-x: auto;
+    padding: 1em 0;
+}
+
+.carousel {
+    display: flex;
+    gap: 1em;
+    padding: 0 1em;
+}
+
+.carousel-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* CARD DA MÚSICA */
+.music-card {
+    min-width: 140px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.music-card img {
+    width: 140px;
+    height: 140px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.music-card span {
+    display: block;
+    margin-top: 0.5em;
+    font-size: 0.9em;
+}
+
+
+
 /* =============================== */
 /* RESET E BASE GLOBAL             */
 /* =============================== */
@@ -16,8 +68,8 @@ body {
 
     background-image: linear-gradient(
         to bottom,
-        rgb(226, 0, 0),
-        rgb(77, 2, 2)
+        rgb(148, 3, 3),
+        rgb(14, 0, 0)
     );
     /* Fundo em degradê */
 
@@ -51,6 +103,51 @@ body {
     flex-direction: column;
     align-items: center;
 }
+
+/* Configurando Botão de voltar*/
+
+#back{
+    position: absolute;                 /* fixa no canto */
+    top: 20px;
+    left: 20px;
+
+}
+
+/* Configurando a Posição da Logo */
+#logo {
+    font-family: 'Poppins', sans-serif; /* fonte bonita */
+    font-size: 2rem;                    /* tamanho da logo */
+    font-weight: 700;                   /* peso forte */
+    color: #ffffff;                     /* cor da logo */
+    
+    position: absolute;                 /* fixa no canto */
+    top: 20px;
+    left: 20px;
+
+    margin: 0;                          /* remove margens do h1 */
+}
+
+/*Configurando Posição das Opções do Menu */
+#menu-container {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: #ffffff;
+
+    position: absolute;
+    top: 100px;
+    left: 20px;
+
+    display: flex;              /* ativa layout flex */
+    flex-direction: column;     /* itens em coluna */
+    gap: 15px;                  /* espaço entre botões */
+
+    
+    background: rgba(18, 18, 18, 0.75); /* fundo transparente */
+    padding: 18px;
+    border-radius: 16px;                  /*deixa a borda redonda*/
+    box-shadow: 0 8px 25px rgba(0,0,0,0.4); /* sombra suave */
+}
+
 
 /* =============================== */
 /* TÍTULO DO PLAYER                */
@@ -163,6 +260,11 @@ button {
     font-size: 4.5em;
     /* Play / Pause */
 }
+button.active {
+    outline: 3px solid white;
+    border-radius: 10px;
+}
+
 
 /* =============================== */
 /* BARRA DE PROGRESSO              */
@@ -193,6 +295,8 @@ button {
     background-color: white;
     border-radius: 15px;
 }
+
+
 
 /* =============================== */
 /* RESPONSIVIDADE (MOBILE)         */
